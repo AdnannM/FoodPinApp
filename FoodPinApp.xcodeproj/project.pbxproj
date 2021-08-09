@@ -13,6 +13,7 @@
 		A603A59A26C13383009E3E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A603A59826C13383009E3E8A /* Main.storyboard */; };
 		A603A59C26C13384009E3E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A603A59B26C13384009E3E8A /* Assets.xcassets */; };
 		A603A59F26C13384009E3E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A603A59D26C13384009E3E8A /* LaunchScreen.storyboard */; };
+		A603A5AB26C1345C009E3E8A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AA26C1345C009E3E8A /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A603A59B26C13384009E3E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A603A59E26C13384009E3E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A603A5A026C13384009E3E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A603A5AA26C1345C009E3E8A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		A603A5A726C1339F009E3E8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A603A5AA26C1345C009E3E8A /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A603A5AB26C1345C009E3E8A /* Restaurant.swift in Sources */,
 				A603A59726C13383009E3E8A /* ViewController.swift in Sources */,
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
 				A603A59526C13383009E3E8A /* SceneDelegate.swift in Sources */,
