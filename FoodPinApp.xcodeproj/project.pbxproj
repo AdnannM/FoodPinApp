@@ -56,15 +56,47 @@
 		A603A59126C13383009E3E8A /* FoodPinApp */ = {
 			isa = PBXGroup;
 			children = (
-				A603A59226C13383009E3E8A /* AppDelegate.swift */,
-				A603A59426C13383009E3E8A /* SceneDelegate.swift */,
-				A603A59626C13383009E3E8A /* ViewController.swift */,
-				A603A59826C13383009E3E8A /* Main.storyboard */,
-				A603A59B26C13384009E3E8A /* Assets.xcassets */,
-				A603A59D26C13384009E3E8A /* LaunchScreen.storyboard */,
+				A603A5A926C133AA009E3E8A /* Controller */,
+				A603A5A826C133A5009E3E8A /* View */,
+				A603A5A726C1339F009E3E8A /* Model */,
+				A603A5A626C13393009E3E8A /* Supporting Files */,
 				A603A5A026C13384009E3E8A /* Info.plist */,
 			);
 			path = FoodPinApp;
+			sourceTree = "<group>";
+		};
+		A603A5A626C13393009E3E8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A603A59226C13383009E3E8A /* AppDelegate.swift */,
+				A603A59426C13383009E3E8A /* SceneDelegate.swift */,
+				A603A59B26C13384009E3E8A /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A603A5A726C1339F009E3E8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A603A5A826C133A5009E3E8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A603A59826C13383009E3E8A /* Main.storyboard */,
+				A603A59D26C13384009E3E8A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A603A5A926C133AA009E3E8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A603A59626C13383009E3E8A /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
