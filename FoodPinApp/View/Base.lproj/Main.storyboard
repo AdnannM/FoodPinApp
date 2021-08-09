@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="MZa-mC-Jjo" kind="presentation" identifier="showMap" modalPresentationStyle="fullScreen" id="2qY-6J-kck"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,6 +55,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byQ-Pp-aX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.15942028985512" y="69.642857142857139"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="nzP-TR-YHZ">
+            <objects>
+                <viewController id="MZa-mC-Jjo" customClass="MapViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79Q-fy-Hy6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-DX-iMc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-cS-TAq">
+                                <rect key="frame" x="354" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="mpY-I7-a3K"/>
+                                    <constraint firstAttribute="height" constant="40" id="xbv-Sx-pXi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mr4-tg-fCh" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="DbR-tX-kRz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-ZD-SAE">
+                                <rect key="frame" x="354" y="92" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jwy-Mb-uYI"/>
+                                    <constraint firstAttribute="width" constant="40" id="fag-dR-9zx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="safari.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ya8-Z4-qgb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SOE-ZD-SAE" firstAttribute="leading" secondItem="hb7-cS-TAq" secondAttribute="leading" id="45m-Zb-KO6"/>
+                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="Cte-9R-9FR"/>
+                            <constraint firstItem="SOE-ZD-SAE" firstAttribute="top" secondItem="hb7-cS-TAq" secondAttribute="bottom" constant="8" id="E6f-oG-QVR"/>
+                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" id="FHb-Bz-HCE"/>
+                            <constraint firstAttribute="trailing" secondItem="1Gv-DX-iMc" secondAttribute="trailing" id="FwL-HX-abm"/>
+                            <constraint firstAttribute="bottom" secondItem="1Gv-DX-iMc" secondAttribute="bottom" id="LdE-GS-IVH"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="hb7-cS-TAq" secondAttribute="trailing" constant="20" id="Tur-e6-DmG"/>
+                            <constraint firstItem="hb7-cS-TAq" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" id="YoX-Bu-SBj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="1Gv-DX-iMc" id="0i9-3a-ahu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-vq-lP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mr4-tg-fCh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAA-GO-aAl">
@@ -72,6 +135,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

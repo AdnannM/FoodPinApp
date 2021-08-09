@@ -74,6 +74,21 @@ class RestaurantTableViewController: UITableViewController {
         return 90
     }
     
-    // MARK: Animation
+    // MARK: - Segue to MapView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationVC = segue.destination as! MapViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationVC.restaurant = restaurants[indexPath.row]
+            }
+        }
+    }
+    
+    // MARK: - Dissmis MapViewController
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Animation
 }
 
