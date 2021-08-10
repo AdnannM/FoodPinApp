@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,6 +82,17 @@
                                     <action selector="showDirectionWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="4CM-Jp-Pbl"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RFn-5i-lKD">
+                                <rect key="frame" x="309" y="831" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ke2-E9-hdQ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="car" catalog="system"/>
+                                    <segment title="" image="figure.walk" catalog="system"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="AccentColor"/>
+                            </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-Pc-xQU">
                                 <rect key="frame" x="359" y="55" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,15 +122,18 @@
                             <constraint firstItem="z5D-Pc-xQU" firstAttribute="centerX" secondItem="wH6-pf-cxf" secondAttribute="centerX" id="Jh4-ur-62B"/>
                             <constraint firstItem="z5D-Pc-xQU" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="11" id="Oh7-eV-21H"/>
                             <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="8" symbolic="YES" id="RAf-sa-EiL"/>
+                            <constraint firstItem="RFn-5i-lKD" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" id="Suz-f9-ZW5"/>
                             <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" id="Wme-lZ-eBa"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="wH6-pf-cxf" secondAttribute="bottom" constant="729" id="ecK-rX-mtt"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="fRA-PJ-ER1"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="79Q-fy-Hy6" secondAttribute="leading" id="geI-Vl-DIJ"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="RFn-5i-lKD" secondAttribute="bottom" constant="1" id="x5B-wj-4ko"/>
                             <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="79Q-fy-Hy6" secondAttribute="trailingMargin" id="y1H-aI-2YZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="1Gv-DX-iMc" id="0i9-3a-ahu"/>
+                        <outlet property="segmentedControl" destination="RFn-5i-lKD" id="Bjh-t7-TeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-vq-lP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,8 +161,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
