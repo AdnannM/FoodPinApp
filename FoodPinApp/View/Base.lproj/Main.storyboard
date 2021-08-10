@@ -68,36 +68,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-DX-iMc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-pf-cxf">
-                                <rect key="frame" x="359" y="98" width="35" height="35"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="safari" catalog="system"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showDirectionWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="4CM-Jp-Pbl"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RFn-5i-lKD">
-                                <rect key="frame" x="309" y="831" width="85" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ke2-E9-hdQ"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="" image="car" catalog="system"/>
-                                    <segment title="" image="figure.walk" catalog="system"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" name="AccentColor"/>
-                            </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-Pc-xQU">
-                                <rect key="frame" x="359" y="55" width="35" height="35"/>
+                                <rect key="frame" x="359" y="54" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ENW-Vs-7Ey"/>
+                                    <constraint firstAttribute="width" constant="35" id="2Jl-UN-h1x"/>
+                                    <constraint firstAttribute="height" constant="35" id="Y9d-iM-VU5"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="xmark" catalog="system">
@@ -112,23 +88,71 @@
                                     <segue destination="mr4-tg-fCh" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="Mpi-Ef-dCr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-pf-cxf">
+                                <rect key="frame" x="359" y="99" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Soh-Ab-cBA"/>
+                                    <constraint firstAttribute="width" constant="35" id="WE3-Gy-Qsn"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="safari" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showDirectionWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="4CM-Jp-Pbl"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RFn-5i-lKD">
+                                <rect key="frame" x="309" y="830" width="85" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Wix-I9-qA9"/>
+                                    <constraint firstAttribute="width" constant="85" id="YCy-Gu-MTt"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="car" catalog="system"/>
+                                    <segment title="" image="figure.walk" catalog="system"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="AccentColor"/>
+                            </segmentedControl>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-gv-azr">
+                                <rect key="frame" x="359" y="142" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="WH1-Cu-1VE"/>
+                                    <constraint firstAttribute="height" constant="35" id="gMG-0L-8x1"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="magnifyingglass.circle" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showNearbyWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="iDI-yV-GNh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ya8-Z4-qgb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Gv-DX-iMc" secondAttribute="trailing" id="0mh-fP-kRk"/>
+                            <constraint firstItem="Mj6-gv-azr" firstAttribute="top" secondItem="wH6-pf-cxf" secondAttribute="bottom" constant="8" symbolic="YES" id="9r3-gn-eBH"/>
                             <constraint firstAttribute="bottom" secondItem="1Gv-DX-iMc" secondAttribute="bottom" id="Ab7-rw-FLR"/>
-                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" constant="359" id="D4B-ij-ywl"/>
-                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="centerX" secondItem="wH6-pf-cxf" secondAttribute="centerX" id="Jh4-ur-62B"/>
-                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="11" id="Oh7-eV-21H"/>
-                            <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="8" symbolic="YES" id="RAf-sa-EiL"/>
-                            <constraint firstItem="RFn-5i-lKD" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" id="Suz-f9-ZW5"/>
-                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" id="Wme-lZ-eBa"/>
-                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="wH6-pf-cxf" secondAttribute="bottom" constant="729" id="ecK-rX-mtt"/>
+                            <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="10" id="P8F-oo-gPe"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="RFn-5i-lKD" secondAttribute="trailing" constant="20" id="T02-fB-L3X"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="Mj6-gv-azr" secondAttribute="trailing" constant="20" id="WFM-MN-iqq"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" constant="20" id="Wpv-lU-N24"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="fRA-PJ-ER1"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="RFn-5i-lKD" secondAttribute="bottom" constant="1" id="fp6-0L-xfe"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="79Q-fy-Hy6" secondAttribute="leading" id="geI-Vl-DIJ"/>
-                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="RFn-5i-lKD" secondAttribute="bottom" constant="1" id="x5B-wj-4ko"/>
-                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="79Q-fy-Hy6" secondAttribute="trailingMargin" id="y1H-aI-2YZ"/>
+                            <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="10" id="jNX-cB-4qf"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="10" id="nXQ-b9-yUu"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="z5D-Pc-xQU" secondAttribute="trailing" constant="20" id="vs6-GS-Iqu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -140,7 +164,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-vq-lP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mr4-tg-fCh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="76"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="75.669642857142847"/>
         </scene>
         <!--Route Table View Controller-->
         <scene sceneID="KvU-FJ-wLU">
@@ -217,6 +241,7 @@
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">

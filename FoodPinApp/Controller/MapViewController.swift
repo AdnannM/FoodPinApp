@@ -140,6 +140,44 @@ class MapViewController: UIViewController {
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
         }
     }
+    
+    // MARK: Action ShowNearby Restaurant
+    @IBAction func showNearby(sender: UIButton) {
+        let searchRequest = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = restaurant.type
+        searchRequest.region = mapView.region
+        
+        let localSearch = MKLocalSearch(request: searchRequest)
+        localSearch.start { localResponse, localError in
+            guard let localResponse = localResponse else {
+                if let localError = localError {
+                    print(localError)
+                }
+                
+                return
+            }
+            
+            let mapItems = localResponse.mapItems
+            var nearbyAnnotation: [MKAnnotation] = []
+            
+            if mapItems.count > 0 {
+                for items in mapItems {
+                    // Add annotation
+                    let annotation = MKPointAnnotation()
+                    annotation.title = items.name
+                    annotation.subtitle = items.phoneNumber
+                    
+                    if let location = items.placemark.location {
+                        annotation.coordinate = location.coordinate
+                    }
+                    
+                    nearbyAnnotation.append(annotation)
+                }
+            }
+            
+            self.mapView.showAnnotations(nearbyAnnotation, animated: true)
+        }
+    }
 }
 
 // MARK: MapViewDelegate Methods
@@ -172,7 +210,8 @@ extension MapViewController: MKMapViewDelegate {
                 markerAnnotationView?.canShowCallout = true
             }
             
-            markerAnnotationView?.glyphText = "🤗"
+            markerAnnotationView?.glyphImage = UIImage(systemName: "location.north.circle.fill")
+            markerAnnotationView?.glyphText = "🍴"
             markerAnnotationView?.glyphTintColor = UIColor.orange
             
             annotationView = markerAnnotationView
