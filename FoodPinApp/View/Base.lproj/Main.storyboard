@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byQ-Pp-aX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.15942028985512" y="69.642857142857139"/>
+            <point key="canvasLocation" x="557" y="70"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="nzP-TR-YHZ">
@@ -67,43 +67,54 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-DX-iMc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-cS-TAq">
-                                <rect key="frame" x="354" y="44" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="mpY-I7-a3K"/>
-                                    <constraint firstAttribute="height" constant="40" id="xbv-Sx-pXi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                </state>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-pf-cxf">
+                                <rect key="frame" x="359" y="98" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="safari" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mr4-tg-fCh" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="DbR-tX-kRz"/>
+                                    <action selector="showDirectionWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="4CM-Jp-Pbl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-ZD-SAE">
-                                <rect key="frame" x="354" y="92" width="40" height="40"/>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-Pc-xQU">
+                                <rect key="frame" x="359" y="55" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Jwy-Mb-uYI"/>
-                                    <constraint firstAttribute="width" constant="40" id="fag-dR-9zx"/>
+                                    <constraint firstAttribute="height" constant="35" id="ENW-Vs-7Ey"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" image="safari.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="17.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mr4-tg-fCh" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="Mpi-Ef-dCr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ya8-Z4-qgb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SOE-ZD-SAE" firstAttribute="leading" secondItem="hb7-cS-TAq" secondAttribute="leading" id="45m-Zb-KO6"/>
-                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="Cte-9R-9FR"/>
-                            <constraint firstItem="SOE-ZD-SAE" firstAttribute="top" secondItem="hb7-cS-TAq" secondAttribute="bottom" constant="8" id="E6f-oG-QVR"/>
-                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" id="FHb-Bz-HCE"/>
-                            <constraint firstAttribute="trailing" secondItem="1Gv-DX-iMc" secondAttribute="trailing" id="FwL-HX-abm"/>
-                            <constraint firstAttribute="bottom" secondItem="1Gv-DX-iMc" secondAttribute="bottom" id="LdE-GS-IVH"/>
-                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="hb7-cS-TAq" secondAttribute="trailing" constant="20" id="Tur-e6-DmG"/>
-                            <constraint firstItem="hb7-cS-TAq" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" id="YoX-Bu-SBj"/>
+                            <constraint firstAttribute="trailing" secondItem="1Gv-DX-iMc" secondAttribute="trailing" id="0mh-fP-kRk"/>
+                            <constraint firstAttribute="bottom" secondItem="1Gv-DX-iMc" secondAttribute="bottom" id="Ab7-rw-FLR"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" constant="359" id="D4B-ij-ywl"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="centerX" secondItem="wH6-pf-cxf" secondAttribute="centerX" id="Jh4-ur-62B"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="11" id="Oh7-eV-21H"/>
+                            <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="8" symbolic="YES" id="RAf-sa-EiL"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" id="Wme-lZ-eBa"/>
+                            <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="wH6-pf-cxf" secondAttribute="bottom" constant="729" id="ecK-rX-mtt"/>
+                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="fRA-PJ-ER1"/>
+                            <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="79Q-fy-Hy6" secondAttribute="leading" id="geI-Vl-DIJ"/>
+                            <constraint firstItem="z5D-Pc-xQU" firstAttribute="trailing" secondItem="79Q-fy-Hy6" secondAttribute="trailingMargin" id="y1H-aI-2YZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -113,7 +124,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-vq-lP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mr4-tg-fCh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="70"/>
+            <point key="canvasLocation" x="1261" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAA-GO-aAl">
@@ -135,7 +146,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

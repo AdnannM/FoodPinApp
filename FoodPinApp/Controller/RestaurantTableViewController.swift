@@ -10,6 +10,8 @@ import UIKit
 class RestaurantTableViewController: UITableViewController {
 
     // MARK: - Properties
+    var heightOfRow: CGFloat = 100
+    
     var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "524 Ct St, Brooklyn, NY 11231", phone: "232-923423", image: "cafedeadend.jpg", isVisited: false),
         Restaurant(name: "Homei", type: "Cafe", location: "75 9th Ave, New York, NY 10011", phone: "348-233423", image: "homei.jpg", isVisited: false),
@@ -62,6 +64,16 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure Cell
+        
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 23)
+        
+        cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 13)
+        
+        cell.imageView?.layer.cornerRadius = 40
+        cell.imageView?.clipsToBounds = true
+        
         let retstaurant = restaurants[indexPath.row]
         cell.textLabel?.text = retstaurant.name
         cell.detailTextLabel?.text = retstaurant.location
@@ -71,9 +83,9 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return heightOfRow
     }
-    
+        
     // MARK: - Segue to MapView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMap" {
@@ -90,5 +102,14 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     // MARK: - Animation
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Define initial state
+        cell.alpha = 0
+        
+        // Define the final state (After animation)
+        UIView.animate(withDuration: 1.0) {
+            cell.alpha = 1
+        }
+    }
 }
 

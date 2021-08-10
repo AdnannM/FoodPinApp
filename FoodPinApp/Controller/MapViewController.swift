@@ -14,10 +14,15 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var restaurant: Restaurant!
     
+    let locationManage = CLLocationManager()
+    var currentPlacemark: CLPlacemark?
+    
     // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.showsUserLocation = true
+        authorizationLocationServices()
         setupMapKit()
     }
     
@@ -25,8 +30,20 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: Convert address to coordinate get the first placemark, add annotation Display annotation
+    // MARK: - Request User's authorization for location service
+    private func authorizationLocationServices() {
+        locationManage.requestAlwaysAuthorization()
+        
+        if #available(iOS 14, *) {
+            let status = CLLocationManager.authorizationStatus()
+            
+            if status == CLAuthorizationStatus.authorizedWhenInUse {
+                mapView.showsUserLocation = true
+            }
+        }
+    }
     
+    // MARK: Convert address to coordinate get the first placemark, add annotation Display annotation
     private func setupMapKit() {
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
@@ -39,6 +56,7 @@ class MapViewController: UIViewController {
             if let placemarks = placemarks {
                 // Get the first placemark
                 let placemark = placemarks[0]
+                self.currentPlacemark = placemark
                 
                 // Add annotation
                 let annotation = MKPointAnnotation()
@@ -60,11 +78,56 @@ class MapViewController: UIViewController {
         mapView.showsScale = true
         mapView.showsBuildings = true
         mapView.showsUserLocation = true
+        mapView.showsCompass = true
+        mapView.isZoomEnabled = true
+    }
+    
+    // MARK: - Action
+    @IBAction func showDirection(sender: UIButton) {
+        guard let currentPlacemark = currentPlacemark else {
+            return
+        }
+        
+        let directionRequest = MKDirections.Request()
+        // Set the source and destionation of the route
+        directionRequest.source = MKMapItem.forCurrentLocation()
+        
+        let destinationPlacemark = MKPlacemark(placemark: currentPlacemark)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
+        directionRequest.transportType = .automobile
+        
+        // Calculate the direction
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate { routeResponse, routeError in
+            guard let routeResponse = routeResponse else {
+                if let routeError = routeError {
+                    print(routeError)
+                }
+                return
+            }
+            
+            let route = routeResponse.routes[0]
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
+            
+            // MARK: Scale the Map to Fit Route
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
+        }
     }
 }
 
 // MARK: MapViewDelegate Methods
 extension MapViewController: MKMapViewDelegate {
+    
+    // MARK: Draw the route
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay)
+        render.strokeColor = UIColor.blue
+        render.lineWidth = 3.0
+        
+        return render
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "MyPin"
