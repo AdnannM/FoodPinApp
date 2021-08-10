@@ -15,6 +15,7 @@
 		A603A59F26C13384009E3E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A603A59D26C13384009E3E8A /* LaunchScreen.storyboard */; };
 		A603A5AB26C1345C009E3E8A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AA26C1345C009E3E8A /* Restaurant.swift */; };
 		A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AC26C14168009E3E8A /* MapViewController.swift */; };
+		A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A603A5A026C13384009E3E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A603A5AA26C1345C009E3E8A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A603A5AC26C14168009E3E8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteTableViewController.swift; path = FoodPinApp/Controller/RouteTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A603A59626C13383009E3E8A /* RestaurantTableViewController.swift */,
+				A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */,
 				A603A5AC26C14168009E3E8A /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -179,6 +182,7 @@
 				A603A59726C13383009E3E8A /* RestaurantTableViewController.swift in Sources */,
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
 				A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */,
+				A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */,
 				A603A59526C13383009E3E8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

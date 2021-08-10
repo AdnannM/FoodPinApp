@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
     var currentPlacemark: CLPlacemark?
     
     var currentTransportType = MKDirectionsTransportType.automobile
+    var currentRoute: MKRoute?
     
     // MARK: ViewLifeCycle
     override func viewDidLoad() {
@@ -129,6 +130,7 @@ class MapViewController: UIViewController {
             }
             
             let route = routeResponse.routes[0]
+            self.currentRoute = route
             self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
             
@@ -190,6 +192,27 @@ extension MapViewController: MKMapViewDelegate {
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
         
+        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        
         return annotationView
+    }
+    
+    // MARK: - Handle Touch
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "showSteps", sender: view)
+    }
+    
+    // MARK: - Segue to next RouteVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationVC
+        // Pass the selected object to the new VC
+        
+        if segue.identifier == "showSteps" {
+            let routeVC = segue.destination.children[0] as! RouteTableViewController
+            
+            if let steps = currentRoute?.steps {
+                routeVC.routeSteps = steps
+            }
+        }
     }
 }
