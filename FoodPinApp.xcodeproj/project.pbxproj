@@ -16,6 +16,7 @@
 		A603A5AB26C1345C009E3E8A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AA26C1345C009E3E8A /* Restaurant.swift */; };
 		A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AC26C14168009E3E8A /* MapViewController.swift */; };
 		A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */; };
+		A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A603A5AA26C1345C009E3E8A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A603A5AC26C14168009E3E8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteTableViewController.swift; path = FoodPinApp/Controller/RouteTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		A603A59126C13383009E3E8A /* FoodPinApp */ = {
 			isa = PBXGroup;
 			children = (
+				A665523F26CAA3AB004C4117 /* CustomCell */,
 				A603A5A926C133AA009E3E8A /* Controller */,
 				A603A5A826C133A5009E3E8A /* View */,
 				A603A5A726C1339F009E3E8A /* Model */,
@@ -106,6 +109,14 @@
 				A603A5AC26C14168009E3E8A /* MapViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A665523F26CAA3AB004C4117 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
 				A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */,
 				A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */,
+				A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */,
 				A603A59526C13383009E3E8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJD5A2P8BC;
 				INFOPLIST_FILE = FoodPinApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJD5A2P8BC;
 				INFOPLIST_FILE = FoodPinApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

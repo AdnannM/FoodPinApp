@@ -10,7 +10,7 @@ import UIKit
 class RestaurantTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var heightOfRow: CGFloat = 100
+   // var heightOfRow: CGFloat = 100
     
     var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "524 Ct St, Brooklyn, NY 11231", phone: "232-923423", image: "cafedeadend.jpg", isVisited: false),
@@ -62,28 +62,22 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RestaurantTableViewCell
         // Configure Cell
         
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 23)
+        let restaurant = restaurants[indexPath.row]
+        cell.restaurantImageView.image = UIImage(named: restaurant.image)
+        cell.restaurantNameLabel.text = restaurant.name.uppercased()
+        cell.restaurantTypeLabel.text = restaurant.type
         
-        cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
-        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 13)
-        
-        cell.imageView?.layer.cornerRadius = 40
-        cell.imageView?.clipsToBounds = true
-        
-        let retstaurant = restaurants[indexPath.row]
-        cell.textLabel?.text = retstaurant.name
-        cell.detailTextLabel?.text = retstaurant.location
-        cell.imageView?.image = UIImage(named: retstaurant.image)
         
         return cell
     }
     
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return heightOfRow
+        return 350
+        
     }
         
     // MARK: - Segue to MapView
