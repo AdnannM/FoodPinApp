@@ -37,6 +37,8 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "379 Grand St, New York, NY 10002", phone: "432-344050", image: "caskpubkitchen.jpg", isVisited: false)
     ]
     
+    var showAnimation: Bool = false
+    
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,15 +62,19 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     private func animateCell() {
+        
+        
+        
         let animations: [Animation] = [
             AnimationType.from(direction: .bottom, offset: 300),
             AnimationType.rotate(angle: .pi / 4),
             AnimationType.zoom(scale: 3)
         ]
         
-        
-        
-        UIView.animate(views: tableView.visibleCells, animations: animations, duration: 1)
+        if !showAnimation {
+            UIView.animate(views: tableView.visibleCells, animations: animations, duration: 1)
+            showAnimation = true
+        }
     }
 
     // MARK: - TableView DataSource
