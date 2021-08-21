@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class RestaurantTableViewController: UITableViewController {
 
@@ -50,6 +51,24 @@ class RestaurantTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Animate View
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateCell()
+    }
+    
+    private func animateCell() {
+        let animations: [Animation] = [
+            AnimationType.from(direction: .bottom, offset: 300),
+            AnimationType.rotate(angle: .pi / 4),
+            AnimationType.zoom(scale: 3)
+        ]
+        
+        
+        
+        UIView.animate(views: tableView.visibleCells, animations: animations, duration: 1)
     }
 
     // MARK: - TableView DataSource
