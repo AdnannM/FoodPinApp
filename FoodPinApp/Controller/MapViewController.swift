@@ -22,6 +22,8 @@ class MapViewController: UIViewController {
     var currentTransportType = MKDirectionsTransportType.automobile
     var currentRoute: MKRoute?
     
+    let popTransitionPresentaion = PopTransitionAnimator()
+    
     // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -248,7 +250,7 @@ extension MapViewController: MKMapViewDelegate {
         
         if segue.identifier == "showSteps" {
             let routeVC = segue.destination.children[0] as! RouteTableViewController
-            
+
             if let steps = currentRoute?.steps {
                 routeVC.routeSteps = steps
             }

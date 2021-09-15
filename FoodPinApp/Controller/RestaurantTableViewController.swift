@@ -13,6 +13,8 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - Properties
    // var heightOfRow: CGFloat = 100
     
+    let popTransitionAnimator = PopTransitionAnimator()
+    
     var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "524 Ct St, Brooklyn, NY 11231", phone: "232-923423", image: "cafedeadend.jpg", isVisited: false),
         Restaurant(name: "Homei", type: "Cafe", location: "75 9th Ave, New York, NY 10011", phone: "348-233423", image: "homei.jpg", isVisited: false),
@@ -72,7 +74,8 @@ class RestaurantTableViewController: UITableViewController {
         ]
         
         if !showAnimation {
-            UIView.animate(views: tableView.visibleCells, animations: animations, duration: 1)
+            UIView.animate(views: tableView.visibleCells,
+                           animations: animations, duration: 1)
             showAnimation = true
         }
     }
@@ -107,6 +110,7 @@ class RestaurantTableViewController: UITableViewController {
         
     // MARK: - Segue to MapView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
         if segue.identifier == "showMap" {
             let destinationVC = segue.destination as! MapViewController
             if let indexPath = tableView.indexPathForSelectedRow {
