@@ -43,11 +43,17 @@ class MapViewController: UIViewController {
         locationManage.requestAlwaysAuthorization()
         
         if #available(iOS 14, *) {
-            let status = CLLocationManager.authorizationStatus()
-            
-            if status == CLAuthorizationStatus.authorizedWhenInUse {
+            let status = CLLocationManager()
+            switch status.authorizationStatus {
+            case .restricted, .denied:
+                mapView.showsUserLocation = false
+            default:
                 mapView.showsUserLocation = true
             }
+            
+//            if status == CLAuthorizationStatus.authorizedWhenInUse {
+//                mapView.showsUserLocation = true
+//            }
         }
     }
     
@@ -230,7 +236,15 @@ extension MapViewController: MKMapViewDelegate {
         }
         
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
-        leftIconView.image = UIImage(named: restaurant.image)
+        
+        leftIconView.image = UIImage()
+        if let restaurantImage = restaurant.image {
+            restaurantImage.getDataInBackground { imageData, _ in
+                if let imageData = imageData {
+                    leftIconView.image = UIImage(data: imageData)
+                }
+            }
+        }
         annotationView?.leftCalloutAccessoryView = leftIconView
         
         annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)

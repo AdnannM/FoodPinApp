@@ -8,5 +8,6 @@ target 'FoodPinApp' do
   # Pods for FoodPinApp
 
 	pod 'ViewAnimator'
+	pod 'Parse'
 
 end

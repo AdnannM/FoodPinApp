@@ -19,8 +19,16 @@ class RouteTableViewController: UITableViewController {
         
         title = "Steps"
     }
+    
+    // MARK: - Action
+    @IBAction func close() {
+        dismiss(animated: true, completion: nil)
+    }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
+extension RouteTableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -39,10 +47,6 @@ class RouteTableViewController: UITableViewController {
 
         return cell
     }
-    
-    // MARK: - Action
-    
-    @IBAction func close() {
-        dismiss(animated: true, completion: nil)
-    }
 }
+
+

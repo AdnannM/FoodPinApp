@@ -50,7 +50,6 @@ class PopTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, UI
         }
         
         // Perform Animation
-        
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: []) {
             if self.isPresenting {
                 fromView.transform = scaleDown
