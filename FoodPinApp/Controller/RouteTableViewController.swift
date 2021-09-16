@@ -49,4 +49,13 @@ extension RouteTableViewController {
     }
 }
 
+// MARK: - To do
+/* --------------------------------------------------->
+
+ - Detecting touch Using Gesture Recognizer
+ - Pinnig a Location on the Map
+ - Drop Pin
+ - Conectiong Annotations with routes
+ - Removing Annotations
+   ---------------------------------------------------> */
 
