@@ -22,6 +22,8 @@ class MapViewController: UIViewController {
     var currentTransportType = MKDirectionsTransportType.automobile
     var currentRoute: MKRoute?
     
+    private var annotations = [MKPointAnnotation]()
+    
     let popTransitionPresentaion = PopTransitionAnimator()
     
     // MARK: ViewLifeCycle
@@ -32,10 +34,57 @@ class MapViewController: UIViewController {
         setupSegmentedControl()
         authorizationLocationServices()
         setupMapKit()
+        
+        mapView.delegate = self
+        
+        let logPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
+        logPress.minimumPressDuration = 0.3
+        mapView.addGestureRecognizer(logPress)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @objc func addAnnotation(sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            return
+        }
+        
+        let tappedPoint = sender.location(in: mapView)
+        let tappedCoordinate = mapView.convert(tappedPoint, toCoordinateFrom: mapView)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = tappedCoordinate
+        
+        annotations.append(annotation)
+        
+        mapView.showAnnotations([annotation], animated: true)
+        
+    }
+    
+    // MARK: - Action
+    @IBAction func drawPolyline() {
+        mapView.removeOverlays(mapView.overlays)
+        
+        var coordinates = [CLLocationCoordinate2D]()
+        for annotaion in annotations {
+            coordinates.append(annotaion.coordinate)
+        }
+        
+        let polyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+        
+        mapView.addOverlay(polyline)
+    }
+    
+    // MARK: - Action Clear Routes
+    @IBAction func clearRoutes() {
+        // Remove annotations overlay
+        mapView.removeOverlays(mapView.overlays)
+        mapView.removeAnnotations(annotations)
+        
+        // Clear annotations array
+        annotations.removeAll()
     }
     
     // MARK: - Request User's authorization for location service
@@ -270,4 +319,65 @@ extension MapViewController: MKMapViewDelegate {
             }
         }
     }
+}
+
+extension MapViewController {
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        let annotationView = views[0]
+        let endFrame = annotationView.frame
+        
+        annotationView.frame = endFrame.offsetBy(dx: 0, dy: -600)
+        
+        UIView.animate(withDuration: 0.3) {
+            annotationView.frame = endFrame
+        }
+    }
+    
+    func mapView(_mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.lineWidth = 3.0
+        renderer.strokeColor = UIColor.purple
+        renderer.alpha = 0.5
+        
+        let visibleMapRect = mapView.mapRectThatFits(renderer.polyline.boundingMapRect,
+                                                     edgePadding: UIEdgeInsets(top: 50,
+                                                                               left: 50,
+                                                                               bottom: 50,
+                                                                               right: 50))
+        mapView.setRegion(MKCoordinateRegion(visibleMapRect), animated: true)
+        
+        return renderer
+    }
+    
+//    func drawRoute(startPont: CLLocationCoordinate2D, endPoint: CLLocationCoordinate2D) {
+//        // Create maps item for coordinate
+//        let startPlacemark = MKPlacemark(coordinate: startPont, addressDictionary: nil)
+//        let endPlacemark = MKPlacemark(coordinate: endPoint, addressDictionary: nil)
+//        
+//        let startMapItem = MKMapItem(placemark: startPlacemark)
+//        let endMapItem = MKMapItem(placemark: endPlacemark)
+//        
+//        // Set source and destionation of route
+//        let directionRequest = MKDirections.Request()
+//        directionRequest.source = startMapItem
+//        directionRequest.destination = endMapItem
+//        
+//        directionRequest.transportType = MKDirectionsTransportType.automobile
+//        
+//        // Calculate direction
+//        let directions = MKDirections(request: directionRequest)
+//        
+//        directions.calculate { routeResponse, routeError in
+//            guard let routeResponse = routeResponse else {
+//                if let routeError = routeError {
+//                    print("Error: \(routeError.localizedDescription)")
+//                }
+//                
+//                return
+//            }
+//            
+//            let route = routeResponse.routes[0]
+//            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
+//        }
+//    }
 }

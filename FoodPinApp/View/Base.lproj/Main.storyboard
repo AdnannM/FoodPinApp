@@ -175,24 +175,58 @@
                                     <action selector="showNearbyWithSender:" destination="MZa-mC-Jjo" eventType="touchUpInside" id="iDI-yV-GNh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bo-3u-7Ny">
+                                <rect key="frame" x="20" y="54" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.46077778841739653" green="0.44036507323237051" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="j5p-EP-kHX"/>
+                                    <constraint firstAttribute="height" constant="35" id="z6M-gx-co6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="line.diagonal.arrow" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawPolyline" destination="MZa-mC-Jjo" eventType="touchUpInside" id="uaR-Lq-Akc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2o-qF-5y6">
+                                <rect key="frame" x="20" y="99" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.44099693294795161" green="0.42146052078569235" blue="0.47853536350202019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4Dk-uc-fnp"/>
+                                    <constraint firstAttribute="width" constant="35" id="BMk-UL-FT9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="trash.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearRoutes" destination="MZa-mC-Jjo" eventType="touchUpInside" id="LLG-ck-wAo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ya8-Z4-qgb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Gv-DX-iMc" secondAttribute="trailing" id="0mh-fP-kRk"/>
+                            <constraint firstItem="V2o-qF-5y6" firstAttribute="top" secondItem="8Bo-3u-7Ny" secondAttribute="bottom" constant="10" id="3JC-cJ-gqj"/>
                             <constraint firstItem="Mj6-gv-azr" firstAttribute="top" secondItem="wH6-pf-cxf" secondAttribute="bottom" constant="8" symbolic="YES" id="9r3-gn-eBH"/>
                             <constraint firstAttribute="bottom" secondItem="1Gv-DX-iMc" secondAttribute="bottom" id="Ab7-rw-FLR"/>
                             <constraint firstItem="RFn-5i-lKD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ya8-Z4-qgb" secondAttribute="leading" symbolic="YES" id="CHu-dF-tIc"/>
+                            <constraint firstItem="8Bo-3u-7Ny" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" constant="20" id="Oih-MD-cBx"/>
                             <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="10" id="P8F-oo-gPe"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="RFn-5i-lKD" secondAttribute="trailing" constant="20" id="T02-fB-L3X"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="Mj6-gv-azr" secondAttribute="trailing" constant="20" id="WFM-MN-iqq"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="wH6-pf-cxf" secondAttribute="trailing" constant="20" id="Wpv-lU-N24"/>
+                            <constraint firstItem="V2o-qF-5y6" firstAttribute="leading" secondItem="Ya8-Z4-qgb" secondAttribute="leading" constant="20" id="ZKT-K2-4Kx"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="RFn-5i-lKD" secondAttribute="bottom" constant="43" id="bRZ-9t-Mrl"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="top" secondItem="79Q-fy-Hy6" secondAttribute="top" id="fRA-PJ-ER1"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="bottom" secondItem="RFn-5i-lKD" secondAttribute="bottom" constant="43" id="fp6-0L-xfe"/>
                             <constraint firstItem="1Gv-DX-iMc" firstAttribute="leading" secondItem="79Q-fy-Hy6" secondAttribute="leading" id="geI-Vl-DIJ"/>
                             <constraint firstItem="wH6-pf-cxf" firstAttribute="top" secondItem="z5D-Pc-xQU" secondAttribute="bottom" constant="10" id="jNX-cB-4qf"/>
                             <constraint firstItem="z5D-Pc-xQU" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="10" id="nXQ-b9-yUu"/>
+                            <constraint firstItem="8Bo-3u-7Ny" firstAttribute="top" secondItem="Ya8-Z4-qgb" secondAttribute="top" constant="10" id="oGp-DS-ubw"/>
                             <constraint firstItem="Ya8-Z4-qgb" firstAttribute="trailing" secondItem="z5D-Pc-xQU" secondAttribute="trailing" constant="20" id="vs6-GS-Iqu"/>
                         </constraints>
                     </view>
@@ -282,8 +316,10 @@
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="line.diagonal.arrow" catalog="system" width="128" height="113"/>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <image name="safari" catalog="system" width="128" height="121"/>
+        <image name="trash.circle" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
