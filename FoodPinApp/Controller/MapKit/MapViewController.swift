@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     
     var restaurant: Restaurant!
     
+    
     let locationManage = CLLocationManager()
     var currentPlacemark: CLPlacemark?
     
@@ -341,9 +342,9 @@ extension MapViewController {
         
         let visibleMapRect = mapView.mapRectThatFits(renderer.polyline.boundingMapRect,
                                                      edgePadding: UIEdgeInsets(top: 50,
-                                                                               left: 50,
-                                                                               bottom: 50,
-                                                                               right: 50))
+                                                                             left: 50,
+                                                                             bottom: 50,
+                                                                             right: 50))
         mapView.setRegion(MKCoordinateRegion(visibleMapRect), animated: true)
         
         return renderer

@@ -19,6 +19,12 @@
 		A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */; };
 		A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */; };
 		A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */; };
+		A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70626FA3C3F00612285 /* Buttons.swift */; };
+		A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */; };
+		A6F3F70D26FA46A800612285 /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70C26FA46A800612285 /* SingInViewController.swift */; };
+		A6F3F70F26FA46B500612285 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70E26FA46B500612285 /* CreateAccountViewController.swift */; };
+		A6F3F71226FA46DD00612285 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F71126FA46DD00612285 /* ForgotPasswordViewController.swift */; };
+		A6F3F71426FA478C00612285 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F71326FA478C00612285 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +38,15 @@
 		A603A5A026C13384009E3E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A603A5AA26C1345C009E3E8A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A603A5AC26C14168009E3E8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteTableViewController.swift; path = FoodPinApp/Controller/RouteTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteTableViewController.swift; path = FoodPinApp/Controller/MapKit/RouteTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		A6F3F70626FA3C3F00612285 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A6F3F70C26FA46A800612285 /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
+		A6F3F70E26FA46B500612285 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		A6F3F71126FA46DD00612285 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		A6F3F71326FA478C00612285 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFDD7AB84152263C2406B9E8 /* Pods-FoodPinApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPinApp.release.xcconfig"; path = "Target Support Files/Pods-FoodPinApp/Pods-FoodPinApp.release.xcconfig"; sourceTree = "<group>"; };
 		D11B2D9D646A283B1124BE28 /* Pods_FoodPinApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPinApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E305026FFF2699A522CE1A5C /* Pods-FoodPinApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPinApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodPinApp/Pods-FoodPinApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +94,7 @@
 		A603A59126C13383009E3E8A /* FoodPinApp */ = {
 			isa = PBXGroup;
 			children = (
+				A6F3F70526FA3C2100612285 /* Helpers */,
 				A6ABC79826DCE2EA001564BF /* SlideAnimation */,
 				A665523F26CAA3AB004C4117 /* CustomCell */,
 				A603A5A926C133AA009E3E8A /* Controller */,
@@ -123,9 +136,11 @@
 		A603A5A926C133AA009E3E8A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6F3F70926FA465400612285 /* MapKit */,
+				A6F3F70826FA464100612285 /* FirebaseAuth */,
 				A603A59626C13383009E3E8A /* RestaurantTableViewController.swift */,
-				A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */,
-				A603A5AC26C14168009E3E8A /* MapViewController.swift */,
+				A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */,
+				A6F3F71326FA478C00612285 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +159,33 @@
 				A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */,
 			);
 			path = SlideAnimation;
+			sourceTree = "<group>";
+		};
+		A6F3F70526FA3C2100612285 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3F70626FA3C3F00612285 /* Buttons.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A6F3F70826FA464100612285 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3F70C26FA46A800612285 /* SingInViewController.swift */,
+				A6F3F70E26FA46B500612285 /* CreateAccountViewController.swift */,
+				A6F3F71126FA46DD00612285 /* ForgotPasswordViewController.swift */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		A6F3F70926FA465400612285 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */,
+				A603A5AC26C14168009E3E8A /* MapViewController.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		B09A136B44F6C351B7CE7D50 /* Frameworks */ = {
@@ -268,13 +310,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F3F70F26FA46B500612285 /* CreateAccountViewController.swift in Sources */,
+				A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */,
+				A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */,
 				A603A5AB26C1345C009E3E8A /* Restaurant.swift in Sources */,
+				A6F3F71426FA478C00612285 /* ProfileViewController.swift in Sources */,
 				A603A59726C13383009E3E8A /* RestaurantTableViewController.swift in Sources */,
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
 				A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */,
 				A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */,
 				A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */,
 				A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */,
+				A6F3F71226FA46DD00612285 /* ForgotPasswordViewController.swift in Sources */,
+				A6F3F70D26FA46A800612285 /* SingInViewController.swift in Sources */,
 				A603A59526C13383009E3E8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

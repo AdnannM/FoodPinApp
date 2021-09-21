@@ -9,5 +9,7 @@ target 'FoodPinApp' do
 
 	pod 'ViewAnimator'
 	pod 'Parse'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Analytics'
 
 end
