@@ -18,7 +18,7 @@ FoodPin with MapKit
 - Drop Pin
 - Connection Annotatiosn with Route
 - Removeing Annotations
-- Firebase Auth
+- Using Firebase for User Authentication
 - Login with Facebook and Google
 - Lottie - iOS Annimation
 
