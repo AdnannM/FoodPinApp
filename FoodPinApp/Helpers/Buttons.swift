@@ -30,27 +30,28 @@ class Buttons: UIButton {
     }
     
     // Text in Button
-    @IBInspectable var titlePaddingLeft: CGFloat = 0.0 {
+    @IBInspectable var titleLeftPadding: Double = 0.0 {
         didSet {
-            titleEdgeInsets.left = titlePaddingLeft
+            titleEdgeInsets.left = CGFloat(titleLeftPadding)
         }
     }
     
-    @IBInspectable var titlePaddingRight: CGFloat = 0.0 {
+    @IBInspectable var titleRightPadding: Double = 0.0 {
         didSet {
-            titleEdgeInsets.right = titlePaddingRight
+            titleEdgeInsets.right = CGFloat(titleRightPadding)
+            print(titleRightPadding)
         }
     }
     
-    @IBInspectable var titlePaddingTop: CGFloat = 0.0 {
+    @IBInspectable var titleTopPadding: Double = 0.0 {
         didSet {
-            titleEdgeInsets.top = titlePaddingTop
+            titleEdgeInsets.top = CGFloat(titleTopPadding)
         }
     }
     
-    @IBInspectable var titlePaddingBottom: CGFloat = 0.0 {
+    @IBInspectable var titleBottomPadding: Double = 0.0 {
         didSet {
-            titleEdgeInsets.bottom = titlePaddingBottom
+            titleEdgeInsets.bottom = CGFloat(titleBottomPadding)
         }
     }
     
@@ -91,7 +92,7 @@ class Buttons: UIButton {
         super.layoutSubviews()
         
         if enableImageLeftRightAligment, let imageView = imageView {
-            imageEdgeInsets.left = self.bounds.width - imageView.bounds.width - imagePaddingRight
+            imageEdgeInsets.left = self.bounds.width - imageView.bounds.width - imagePaddingLeft
         }
         
         // Gradiant

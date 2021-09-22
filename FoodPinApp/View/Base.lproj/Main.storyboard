@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rL-OZ-08q">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zsh-B0-QKa">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -15,25 +15,25 @@
             <objects>
                 <tableViewController id="W35-fM-GQj" customClass="RestaurantTableViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSC-uZ-R6P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="345" id="z2i-cE-HjT" customClass="RestaurantTableViewCell" customModule="FoodPinApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="345"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="345"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z2i-cE-HjT" id="Orx-eE-Azo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="345"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sM-UQ-cPE">
-                                            <rect key="frame" x="16" y="21" width="343" height="197"/>
+                                            <rect key="frame" x="20" y="21" width="388" height="197"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="197" id="oje-e7-QRc"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-gn-bKX">
-                                            <rect key="frame" x="16" y="254" width="323" height="21"/>
+                                            <rect key="frame" x="20" y="254" width="368" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="6pt-5z-54x"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="354" id="sRG-KB-7L0"/>
@@ -43,13 +43,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-73-qcR">
-                                            <rect key="frame" x="15.999999999999996" y="285" width="45.666666666666657" height="20.666666666666686"/>
+                                            <rect key="frame" x="19.999999999999996" y="285" width="45.666666666666657" height="20.666666666666686"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGj-cz-Tde">
-                                            <rect key="frame" x="16" y="314" width="343" height="2"/>
+                                            <rect key="frame" x="20" y="314" width="388" height="2"/>
                                             <color key="backgroundColor" systemColor="labelColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="X7C-ep-UqN"/>
@@ -96,14 +96,14 @@
             <objects>
                 <viewController id="MZa-mC-Jjo" customClass="MapViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="79Q-fy-Hy6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-DX-iMc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </mapView>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-Pc-xQU">
-                                <rect key="frame" x="320" y="54" width="35" height="35"/>
+                                <rect key="frame" x="373" y="54" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="2Jl-UN-h1x"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-pf-cxf">
-                                <rect key="frame" x="320" y="99" width="35" height="35"/>
+                                <rect key="frame" x="373" y="99" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Soh-Ab-cBA"/>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RFn-5i-lKD">
-                                <rect key="frame" x="270" y="704" width="85" height="32"/>
+                                <rect key="frame" x="323" y="818" width="85" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Wix-I9-qA9"/>
                                     <constraint firstAttribute="width" constant="85" id="YCy-Gu-MTt"/>
@@ -157,7 +157,7 @@
                                 <color key="selectedSegmentTintColor" name="AccentColor"/>
                             </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-gv-azr">
-                                <rect key="frame" x="320" y="142" width="35" height="35"/>
+                                <rect key="frame" x="373" y="142" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1215686275" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="WH1-Cu-1VE"/>
@@ -247,15 +247,15 @@
             <objects>
                 <tableViewController id="k2q-TO-12g" customClass="RouteTableViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="em7-pb-Dnc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="bLR-HC-k5e">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLR-HC-k5e" id="Xzw-8z-rI6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -282,15 +282,234 @@
             <objects>
                 <viewController id="zsh-B0-QKa" customClass="WelcomeViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8rz-vm-GoU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-LS-pNb">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="znm-kP-Rud">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u3-4B-ZlS" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="594" width="358" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ClZ-OT-CID"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SIGN IN WITH EMAIL" image="email">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightPadding">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLeftPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePaddingRight">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-bG-X9a" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="675" width="358" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3ja-oi-7En"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SIGN IN WITH FACEBOOK" image="facebook"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightPadding">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLeftPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePaddingRight">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekf-I7-AYJ" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="813" width="358" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kmc-Ix-CpJ"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CREATE ACCOUNT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightPadding">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLeftPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePaddingRight">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEs-F8-2IW" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="732" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.28235294119999998" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zKc-an-4WN"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SIGN IN WITH GOOGLE" image="google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightPadding">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLeftPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePaddingRight">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleRightPadding">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Welcome to Food Pin." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-Z9-jFa">
+                                <rect key="frame" x="34" y="135" width="332" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ILF-0A-cka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifk-aK-whA" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="34" y="84" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="eLx-PU-7rz"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="F">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaidus">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eY1-Ku-ck5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dEs-F8-2IW" firstAttribute="top" secondItem="hjb-bG-X9a" secondAttribute="bottom" constant="7" id="0jV-zp-RYh"/>
+                            <constraint firstItem="znm-kP-Rud" firstAttribute="trailing" secondItem="eY1-Ku-ck5" secondAttribute="trailing" id="2DR-CP-UZu"/>
+                            <constraint firstItem="ekf-I7-AYJ" firstAttribute="top" secondItem="dEs-F8-2IW" secondAttribute="bottom" constant="31" id="2iX-tp-FfW"/>
+                            <constraint firstAttribute="bottom" secondItem="4u3-4B-ZlS" secondAttribute="bottom" constant="282" id="6K4-mU-lAR"/>
+                            <constraint firstItem="eY1-Ku-ck5" firstAttribute="trailing" secondItem="4u3-4B-ZlS" secondAttribute="trailing" constant="32" id="9ed-pi-fsc"/>
+                            <constraint firstAttribute="trailing" secondItem="4hB-LS-pNb" secondAttribute="trailing" id="AWQ-DA-bnB"/>
+                            <constraint firstItem="hjb-bG-X9a" firstAttribute="top" secondItem="4u3-4B-ZlS" secondAttribute="bottom" constant="31" id="IVd-JJ-R35"/>
+                            <constraint firstItem="4hB-LS-pNb" firstAttribute="top" secondItem="8rz-vm-GoU" secondAttribute="top" id="IkU-oZ-LhY"/>
+                            <constraint firstItem="znm-kP-Rud" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" id="KSd-jP-mNj"/>
+                            <constraint firstItem="eY1-Ku-ck5" firstAttribute="trailing" secondItem="dEs-F8-2IW" secondAttribute="trailing" constant="32" id="MoI-Gk-CGT"/>
+                            <constraint firstItem="qbE-Z9-jFa" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="34" id="Qlc-wB-IHx"/>
+                            <constraint firstItem="qbE-Z9-jFa" firstAttribute="top" secondItem="Ifk-aK-whA" secondAttribute="bottom" constant="1" id="UQF-2o-1jM"/>
+                            <constraint firstItem="4hB-LS-pNb" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" id="WJH-qn-ECr"/>
+                            <constraint firstItem="eY1-Ku-ck5" firstAttribute="trailing" secondItem="qbE-Z9-jFa" secondAttribute="trailing" constant="62" id="WMH-pv-Mi6"/>
+                            <constraint firstItem="eY1-Ku-ck5" firstAttribute="trailing" secondItem="hjb-bG-X9a" secondAttribute="trailing" constant="32" id="WkD-rT-Dbl"/>
+                            <constraint firstAttribute="bottom" secondItem="4hB-LS-pNb" secondAttribute="bottom" id="ZMk-9a-qYj"/>
+                            <constraint firstItem="4u3-4B-ZlS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qbE-Z9-jFa" secondAttribute="bottom" constant="20" id="Zou-Ll-Ld3"/>
+                            <constraint firstItem="eY1-Ku-ck5" firstAttribute="trailing" secondItem="ekf-I7-AYJ" secondAttribute="trailing" constant="32" id="at7-sc-X4a"/>
+                            <constraint firstItem="dEs-F8-2IW" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="38" id="b6h-QA-xnE"/>
+                            <constraint firstItem="4u3-4B-ZlS" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="38" id="fBP-xj-Pjl"/>
+                            <constraint firstAttribute="bottom" secondItem="znm-kP-Rud" secondAttribute="bottom" id="fna-zU-SvW"/>
+                            <constraint firstItem="znm-kP-Rud" firstAttribute="top" secondItem="8rz-vm-GoU" secondAttribute="top" id="jzX-vt-Qp8"/>
+                            <constraint firstItem="qbE-Z9-jFa" firstAttribute="top" secondItem="eY1-Ku-ck5" secondAttribute="top" constant="91" id="lCe-b1-XqI"/>
+                            <constraint firstItem="hjb-bG-X9a" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="38" id="qEL-s6-uuZ"/>
+                            <constraint firstItem="ekf-I7-AYJ" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="38" id="xm3-po-fHB"/>
+                            <constraint firstItem="Ifk-aK-whA" firstAttribute="leading" secondItem="eY1-Ku-ck5" secondAttribute="leading" constant="34" id="ywm-Mb-jUE"/>
+                            <constraint firstItem="Ifk-aK-whA" firstAttribute="top" secondItem="eY1-Ku-ck5" secondAttribute="top" constant="40" id="zOk-I6-hbL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WA-nL-wNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2521" y="-4"/>
+            <point key="canvasLocation" x="-2530.4000000000001" y="-7.6461769115442282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAA-GO-aAl">
@@ -298,7 +517,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0rL-OZ-08q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GKI-qF-tgY">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -316,7 +535,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND0-Jw-QU2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVq-0S-dcm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -333,8 +552,21 @@
             <objects>
                 <viewController id="pm6-gn-xev" customClass="SingInViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tlc-JP-Ycc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0a-4D-PTN" customClass="Buttons" customModule="FoodPinApp" customModuleProvider="target">
+                                <rect key="frame" x="68" y="405" width="289" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleRightPadding">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nbX-XG-2Ig"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -342,18 +574,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdc-oP-GLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="-349"/>
+            <point key="canvasLocation" x="-990.76923076923072" y="-349.05213270142178"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="tdC-nQ-PGc">
             <objects>
                 <viewController id="g7B-2x-18H" customClass="ProfileViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyM-Ex-vwE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-Fb-uZv">
-                                <rect key="frame" x="0.0" y="-4" width="375" height="816"/>
+                                <rect key="frame" x="0.0" y="-4" width="428" height="930"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xWE-lx-gbQ"/>
@@ -376,7 +608,7 @@
             <objects>
                 <viewController id="LP6-P6-9ct" customClass="ForgotPasswordViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJT-Ty-qOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qmq-VN-pZf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -391,7 +623,7 @@
             <objects>
                 <viewController id="PnF-F6-1c3" customClass="CreateAccountViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HlL-PT-wQR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9vD-Df-9me"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -408,7 +640,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wd7-5K-vNL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fvx-fd-J2F">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -426,7 +658,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCS-cw-Yuf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uhg-xr-PqI">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -444,7 +676,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gKE-mr-7T1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4h-Vo-0OD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -457,14 +689,38 @@
             <point key="canvasLocation" x="-1727" y="334"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4u3-4B-ZlS">
+            <size key="intrinsicContentSize" width="193" height="22"/>
+        </designable>
+        <designable name="Ifk-aK-whA">
+            <size key="intrinsicContentSize" width="42.666666666666664" height="51.333333333333336"/>
+        </designable>
+        <designable name="L0a-4D-PTN">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="dEs-F8-2IW">
+            <size key="intrinsicContentSize" width="211" height="22"/>
+        </designable>
+        <designable name="ekf-I7-AYJ">
+            <size key="intrinsicContentSize" width="156" height="34"/>
+        </designable>
+        <designable name="hjb-bG-X9a">
+            <size key="intrinsicContentSize" width="238.66666666666666" height="26.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="email" width="24" height="16"/>
+        <image name="facebook" width="28.666666030883789" height="26.666666030883789"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="google" width="21" height="21"/>
         <image name="line.diagonal.arrow" catalog="system" width="128" height="113"/>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <image name="profile" width="562" height="1000"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <image name="trash.circle" catalog="system" width="128" height="121"/>
+        <image name="welcome" width="562" height="1000"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
