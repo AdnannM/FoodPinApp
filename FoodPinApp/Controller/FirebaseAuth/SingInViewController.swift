@@ -12,8 +12,6 @@ class SingInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Sing In"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 

@@ -18,6 +18,9 @@
 		A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AC26C14168009E3E8A /* MapViewController.swift */; };
 		A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */; };
 		A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */; };
+		A67918BC26FB69500020AFEC /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67918BB26FB69500020AFEC /* UITextField+Placeholder.swift */; };
+		A67918BF26FB945F0020AFEC /* circle.json in Resources */ = {isa = PBXBuildFile; fileRef = A67918BE26FB945F0020AFEC /* circle.json */; };
+		A680F31626FB983E00DAC308 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A680F31526FB983E00DAC308 /* data.json */; };
 		A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */; };
 		A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70626FA3C3F00612285 /* Buttons.swift */; };
 		A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */; };
@@ -50,6 +53,9 @@
 		A603A5AC26C14168009E3E8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A603A5AE26C289C2009E3E8A /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteTableViewController.swift; path = FoodPinApp/Controller/MapKit/RouteTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A665524026CAA3CA004C4117 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		A67918BB26FB69500020AFEC /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
+		A67918BE26FB945F0020AFEC /* circle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = circle.json; sourceTree = "<group>"; };
+		A680F31526FB983E00DAC308 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
 		A6F3F70626FA3C3F00612285 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 		A603A59126C13383009E3E8A /* FoodPinApp */ = {
 			isa = PBXGroup;
 			children = (
+				A67918BD26FB944E0020AFEC /* Lotti Animations */,
 				A6FFAE9D26FB10260099B967 /* Resources */,
 				A6F3F70526FA3C2100612285 /* Helpers */,
 				A6ABC79826DCE2EA001564BF /* SlideAnimation */,
@@ -174,6 +181,15 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		A67918BD26FB944E0020AFEC /* Lotti Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A67918BE26FB945F0020AFEC /* circle.json */,
+				A680F31526FB983E00DAC308 /* data.json */,
+			);
+			path = "Lotti Animations";
+			sourceTree = "<group>";
+		};
 		A6ABC79826DCE2EA001564BF /* SlideAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F3F70626FA3C3F00612285 /* Buttons.swift */,
+				A67918BB26FB69500020AFEC /* UITextField+Placeholder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -309,10 +326,12 @@
 				A603A59C26C13384009E3E8A /* Assets.xcassets in Resources */,
 				A6FFAEAB26FB104D0099B967 /* Rubik-Italic.ttf in Resources */,
 				A6FFAEAD26FB104D0099B967 /* Rubik-MediumItalic.ttf in Resources */,
+				A67918BF26FB945F0020AFEC /* circle.json in Resources */,
 				A6FFAEB026FB104D0099B967 /* Rubik-BoldItalic.ttf in Resources */,
 				A6FFAEAA26FB104D0099B967 /* Rubik-Light.ttf in Resources */,
 				A6FFAEA026FB103D0099B967 /* Rubik-BlackItalic.ttf in Resources */,
 				A603A59A26C13383009E3E8A /* Main.storyboard in Resources */,
+				A680F31626FB983E00DAC308 /* data.json in Resources */,
 				A6FFAEAC26FB104D0099B967 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +394,7 @@
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
 				A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */,
 				A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */,
+				A67918BC26FB69500020AFEC /* UITextField+Placeholder.swift in Sources */,
 				A603A5AF26C289C2009E3E8A /* RouteTableViewController.swift in Sources */,
 				A665524126CAA3CA004C4117 /* RestaurantTableViewCell.swift in Sources */,
 				A6F3F71226FA46DD00612285 /* ForgotPasswordViewController.swift in Sources */,

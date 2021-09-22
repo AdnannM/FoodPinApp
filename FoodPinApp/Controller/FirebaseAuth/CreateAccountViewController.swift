@@ -11,9 +11,7 @@ class CreateAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Sign Up"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
 
