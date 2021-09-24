@@ -164,11 +164,10 @@
 		A603A5A926C133AA009E3E8A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6A1D3F226FDB23B001B53A2 /* Profile */,
+				A6A1D3F126FDB22E001B53A2 /* Welcome */,
 				A6F3F70926FA465400612285 /* MapKit */,
 				A6F3F70826FA464100612285 /* FirebaseAuth */,
-				A603A59626C13383009E3E8A /* RestaurantTableViewController.swift */,
-				A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */,
-				A6F3F71326FA478C00612285 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +187,23 @@
 				A680F31526FB983E00DAC308 /* data.json */,
 			);
 			path = "Lotti Animations";
+			sourceTree = "<group>";
+		};
+		A6A1D3F126FDB22E001B53A2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */,
+				A603A59626C13383009E3E8A /* RestaurantTableViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A6A1D3F226FDB23B001B53A2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3F71326FA478C00612285 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A6ABC79826DCE2EA001564BF /* SlideAnimation */ = {
