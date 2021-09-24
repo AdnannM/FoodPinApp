@@ -7,6 +7,8 @@
 
 import UIKit
 import Parse
+import FirebaseAuth
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         
+        FirebaseApp.configure()
         Parse.initialize(with: configuration)
         
         return true

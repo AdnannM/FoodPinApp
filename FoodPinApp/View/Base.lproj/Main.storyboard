@@ -1115,6 +1115,9 @@
                                         <color key="value" systemColor="systemTealColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="singUpButtonPressed:" destination="PnF-F6-1c3" eventType="touchUpInside" id="jgz-db-HOu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9vD-Df-9me"/>
@@ -1153,6 +1156,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="73c-9Z-07r" id="peR-mL-d14"/>
+                        <outlet property="nameTextField" destination="y12-A7-XED" id="I6X-4A-OPu"/>
+                        <outlet property="passwordTextField" destination="haS-2Z-h3l" id="qNM-Jt-JEf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kR-8S-6ve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="e2L-xS-P7e" userLabel="Exit" sceneMemberID="exit"/>

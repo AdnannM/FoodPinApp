@@ -6,23 +6,36 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    @IBOutlet weak var nameTextField: UITextField! {
+        didSet {
+            nameTextField.becomeFirstResponder()
+        }
+    }
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Action
+    @IBAction func registerAccount(_ sender: UIButton) {
+        // Validate Input
+        guard let name = nameTextField.text, name != "",
+              let email = emailTextField.text, email != "",
+              let password = passwordTextField.text, password != ""
+        else {
+              return
+        }
+        
+        // 
+        AuthManager.shared.registerUser(name: name, email: email, password: password)
     }
-    */
-
 }
