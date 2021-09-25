@@ -13,7 +13,7 @@
         <!--Restaurant Table View Controller-->
         <scene sceneID="f6N-bS-MB1">
             <objects>
-                <tableViewController storyboardIdentifier="MainView" id="W35-fM-GQj" customClass="RestaurantTableViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="W35-fM-GQj" customClass="RestaurantTableViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSC-uZ-R6P">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +287,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="gpj-hM-Jit">
             <objects>
-                <viewController id="zsh-B0-QKa" customClass="WelcomeViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="zsh-B0-QKa" customClass="WelcomeViewController" customModule="FoodPinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8rz-vm-GoU">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -601,11 +601,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-G1-ENL">
                                         <rect key="frame" x="70" y="188" width="198" height="80.666666666666686"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aPc-1r-S0A">
-                                                <rect key="frame" x="0.0" y="0.0" width="159.33333333333334" height="18.666666666666668"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aPc-1r-S0A">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.33333333333334" height="18.666666666666668"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5O2-c8-Iqe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159.33333333333334" height="18.666666666666668"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5O2-c8-Iqe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.33333333333334" height="18.666666666666668"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ0-Xm-sNJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="18.666666666666668"/>
@@ -614,7 +614,7 @@
                                                                 <state key="normal" image="email"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ENTER YOUR EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3x-yr-hfB">
-                                                                <rect key="frame" x="28" y="0.0" width="131.33333333333334" height="18.666666666666668"/>
+                                                                <rect key="frame" x="30" y="0.0" width="131.33333333333334" height="18.666666666666668"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
@@ -692,6 +692,9 @@
                                                 <color key="value" systemColor="systemTealColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginUser:" destination="pm6-gn-xev" eventType="touchUpInside" id="l2i-bs-snj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luS-DA-34T">
                                         <rect key="frame" x="119.33333333333333" y="380" width="189.66666666666669" height="35"/>
@@ -752,6 +755,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="V3x-yr-hfB" id="GfH-os-63Y"/>
+                        <outlet property="passwordTextField" destination="7vu-2i-zdY" id="TTy-yf-voY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdc-oP-GLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="dXg-AD-3i8" userLabel="Exit" sceneMemberID="exit"/>
@@ -776,7 +783,7 @@
                                     <constraint firstAttribute="height" constant="240" id="tZN-gw-6M1"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adnann Muratovic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHE-bF-5Dt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHE-bF-5Dt">
                                 <rect key="frame" x="20" y="311" width="388" height="32"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -828,6 +835,9 @@
                                         <color key="value" systemColor="tintColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logout:" destination="g7B-2x-18H" eventType="touchUpInside" id="Rgw-tb-Bvc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xWE-lx-gbQ"/>
@@ -849,6 +859,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tOF-H3-e1I"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="EHE-bF-5Dt" id="nqt-gf-ngQ"/>
+                        <outlet property="profileImage" destination="A40-l1-fwp" id="WC9-SM-5r2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7k-X3-gkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -980,7 +994,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vji-kf-gPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144.39252336448598" y="115.98272138228943"/>
+            <point key="canvasLocation" x="444" y="401"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="1BD-Vt-OQY">
@@ -1125,7 +1139,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccount:" destination="PnF-F6-1c3" eventType="touchUpInside" id="pJI-E5-JZ3"/>
-                                    <segue destination="0rL-OZ-08q" kind="presentation" identifier="MainVC" modalPresentationStyle="fullScreen" id="ol1-kj-tFd"/>
                                 </connections>
                             </button>
                         </subviews>

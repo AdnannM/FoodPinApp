@@ -49,8 +49,17 @@ class AuthManager {
           }
     }
     
-    public func loginUser(email: String, password: String, completion: @escaping(Bool) -> Void) {
-        
+    public func loginUser(email: String?, password: String, completion: @escaping(Bool) -> Void) {
+        if let email = email {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                guard  authResult != nil, error == nil else {
+                    completion(false)
+                    return
+                }
+                
+                completion(true)
+            }
+        }
     }
     
     public func saveUserName(name: String, completion: @escaping(Error?) -> Void) {

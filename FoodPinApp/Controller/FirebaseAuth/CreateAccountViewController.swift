@@ -65,15 +65,11 @@ class CreateAccountViewController: UIViewController {
         }
     }
         
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
-            if Auth.auth().currentUser != nil {
-                if segue.identifier == "MainVC" {
-                    let nav = segue.destination as! RestaurantTableViewController
-                    nav.modalPresentationStyle = .fullScreen
-                    present(nav, animated: true)
-                }
-            }
-        }
+        // Present View
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") {
+            UIApplication.shared.keyWindow?.rootViewController = vc
+            self.dismiss(animated: true, completion: nil)
+    }
 }
     
     

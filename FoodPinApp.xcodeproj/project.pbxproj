@@ -25,6 +25,7 @@
 		A6A1D3F726FE1491001B53A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3F626FE1491001B53A2 /* AuthManager.swift */; };
 		A6A1D3F926FE15C1001B53A2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3F826FE15C1001B53A2 /* StorageManager.swift */; };
 		A6A1D3FB26FF276D001B53A2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */; };
+		A6A1D3FD26FF64EA001B53A2 /* data-4.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A1D3FC26FF64EA001B53A2 /* data-4.json */; };
 		A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */; };
 		A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70626FA3C3F00612285 /* Buttons.swift */; };
 		A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */; };
@@ -64,6 +65,7 @@
 		A6A1D3F626FE1491001B53A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A6A1D3F826FE15C1001B53A2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A6A1D3FC26FF64EA001B53A2 /* data-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-4.json"; sourceTree = "<group>"; };
 		A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
 		A6F3F70626FA3C3F00612285 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		A67918BD26FB944E0020AFEC /* Lotti Animations */ = {
 			isa = PBXGroup;
 			children = (
+				A6A1D3FC26FF64EA001B53A2 /* data-4.json */,
 				A67918BE26FB945F0020AFEC /* circle.json */,
 				A680F31526FB983E00DAC308 /* data.json */,
 			);
@@ -361,6 +364,7 @@
 				A6FFAEAE26FB104D0099B967 /* Rubik-Bold.ttf in Resources */,
 				A603A59C26C13384009E3E8A /* Assets.xcassets in Resources */,
 				A6FFAEAB26FB104D0099B967 /* Rubik-Italic.ttf in Resources */,
+				A6A1D3FD26FF64EA001B53A2 /* data-4.json in Resources */,
 				A6FFAEAD26FB104D0099B967 /* Rubik-MediumItalic.ttf in Resources */,
 				A67918BF26FB945F0020AFEC /* circle.json in Resources */,
 				A6A1D3F426FE0F12001B53A2 /* GoogleService-Info.plist in Resources */,
