@@ -22,29 +22,36 @@ class SingInViewController: UIViewController {
     
     @IBAction func loginUser(_ sender: UIButton) {
         // Validate User
+        
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
                   showError(title: "Login Error", message: "Both filed must not be blank.")
                   return
         }
         
-        AuthManager.shared.loginUser(email: email, password: password) { login in
+        var emailUser: String?
+        
+        if email.contains("@"), email.contains(".") {
+            emailUser = email
+        }
+        
+        AuthManager.shared.loginUser(email: emailUser, password: password) { login in
             if login {
                 self.showError(title: "Great!", message: "Successeffuly Login to FoodPin")
-                self.loginAnimation()
+                self.dismiss(animated: true, completion: nil)
             } else {
-                self.showError(title: "Login Error", message: "Error! Try Again")
+                self.showError(title: "Login Error", message: "We are unable to log you in")
             }
             
             // Dissmiss the keyboard
             self.view.endEditing(true)
         }
         
-        // Present View
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") {
-            UIApplication.shared.keyWindow?.rootViewController = vc
-            self.dismiss(animated: true, completion: nil)
-        }
+//        // Present View
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") {
+//            UIApplication.shared.keyWindow?.rootViewController = vc
+//            self.dismiss(animated: true, completion: nil)
+//        }
     }
     
     private func showError(title: String, message: String) {
