@@ -19,6 +19,12 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    enum Resigration {
+        case name
+        case password
+        case email
+    }
+    
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +32,55 @@ class CreateAccountViewController: UIViewController {
     }
     
     // MARK: - Action
-    @IBAction func registerAccount(_ sender: UIButton) {
-        // Validate Input
-        guard let name = nameTextField.text, name != "",
-              let email = emailTextField.text, email != "",
-              let password = passwordTextField.text, password != ""
-        else {
-              return
-        }
+    @IBAction func createAccount(_ sender: UIButton) {
+        nameTextField.becomeFirstResponder()
+        emailTextField.becomeFirstResponder()
+        passwordTextField.becomeFirstResponder()
         
-        // 
-        AuthManager.shared.registerUser(name: name, email: email, password: password)
+        guard let name = nameTextField.text, !name.isEmpty,
+              let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+                  showAlert(title: "Restrations Error",
+                            message: "Please make sure you provide your name, email address and password to complete registration")
+                  return
+              }
+        
+        // Register user account on Firebase
+        AuthManager.shared.registerUser(name: name, email: email, password: password) { register in
+            if register {
+                
+            } else {
+                self.showAlert(title: "Resistration Error", message: "Failed to Create Account Please try Again!")
+                return
+            }
+            
+            // Save the neme of the user
+            AuthManager.shared.saveUserName(name: name) { error in
+                if let error = error {
+                    self.showAlert(title: "Failed to change display name", message: "\(error.localizedDescription)")
+                }
+                
+                // Dissmis the keyboard
+                self.view.endEditing(true)
+        }
+    }
+        
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+            if Auth.auth().currentUser != nil {
+                if segue.identifier == "MainVC" {
+                    let nav = segue.destination as! RestaurantTableViewController
+                    nav.modalPresentationStyle = .fullScreen
+                    present(nav, animated: true)
+                }
+            }
+        }
+}
+    
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }

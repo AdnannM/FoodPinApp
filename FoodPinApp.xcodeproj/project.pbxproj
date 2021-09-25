@@ -24,6 +24,7 @@
 		A6A1D3F426FE0F12001B53A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6A1D3F326FE0F12001B53A2 /* GoogleService-Info.plist */; };
 		A6A1D3F726FE1491001B53A2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3F626FE1491001B53A2 /* AuthManager.swift */; };
 		A6A1D3F926FE15C1001B53A2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3F826FE15C1001B53A2 /* StorageManager.swift */; };
+		A6A1D3FB26FF276D001B53A2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */; };
 		A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */; };
 		A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70626FA3C3F00612285 /* Buttons.swift */; };
 		A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */; };
@@ -62,6 +63,7 @@
 		A6A1D3F326FE0F12001B53A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6A1D3F626FE1491001B53A2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A6A1D3F826FE15C1001B53A2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
 		A6F3F70626FA3C3F00612285 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				A6A1D3F626FE1491001B53A2 /* AuthManager.swift */,
 				A6A1D3F826FE15C1001B53A2 /* StorageManager.swift */,
+				A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */,
 			);
 			path = FirebaseAuth;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				A6F3F71426FA478C00612285 /* ProfileViewController.swift in Sources */,
 				A603A59726C13383009E3E8A /* RestaurantTableViewController.swift in Sources */,
 				A603A59326C13383009E3E8A /* AppDelegate.swift in Sources */,
+				A6A1D3FB26FF276D001B53A2 /* DatabaseManager.swift in Sources */,
 				A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */,
 				A603A5AD26C14168009E3E8A /* MapViewController.swift in Sources */,
 				A6A1D3F726FE1491001B53A2 /* AuthManager.swift in Sources */,

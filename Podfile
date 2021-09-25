@@ -12,6 +12,7 @@ target 'FoodPinApp' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Storage'
+	pod 'FirebaseDatabase'
 	pod 'lottie-ios'
 	pod 'DeviceKit'
 
