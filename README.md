@@ -19,7 +19,8 @@ FoodPin with MapKit
 - Connection Annotatiosn with Route
 - Removeing Annotations
 - Using Firebase for User Authentication
-- Implementing Sing Up, Login and Logout Using Firebase, Ressetting User's Password 
+- Implementing Sing Up, Login and Logout Using Firebase, Ressetting User's Password
+- Email Verification
 - Login with Facebook and Google
 - Lottie - iOS Annimation
 
