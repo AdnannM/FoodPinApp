@@ -47,11 +47,16 @@ class CreateAccountViewController: UIViewController {
         
         // Register user account on Firebase
         AuthManager.shared.registerUser(name: name, email: email, password: password) { register in
-            if register {
-                
-            } else {
-                self.showAlert(title: "Resistration Error", message: "Failed to Create Account Please try Again!")
-                return
+            DispatchQueue.main.async {
+                if register {
+                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") {
+                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    self.showAlert(title: "Resistration Error", message: "Failed to Create Account Please try Again!")
+                    return
+                }
             }
             
             // Save the neme of the user
@@ -64,12 +69,6 @@ class CreateAccountViewController: UIViewController {
                 self.view.endEditing(true)
         }
     }
-        
-        // Present View
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") {
-            UIApplication.shared.keyWindow?.rootViewController = vc
-            self.dismiss(animated: true, completion: nil)
-    }
 }
     
     
@@ -80,3 +79,4 @@ class CreateAccountViewController: UIViewController {
         present(alert, animated: true)
     }
 }
+

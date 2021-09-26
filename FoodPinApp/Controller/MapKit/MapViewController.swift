@@ -349,36 +349,4 @@ extension MapViewController {
         
         return renderer
     }
-    
-//    func drawRoute(startPont: CLLocationCoordinate2D, endPoint: CLLocationCoordinate2D) {
-//        // Create maps item for coordinate
-//        let startPlacemark = MKPlacemark(coordinate: startPont, addressDictionary: nil)
-//        let endPlacemark = MKPlacemark(coordinate: endPoint, addressDictionary: nil)
-//        
-//        let startMapItem = MKMapItem(placemark: startPlacemark)
-//        let endMapItem = MKMapItem(placemark: endPlacemark)
-//        
-//        // Set source and destionation of route
-//        let directionRequest = MKDirections.Request()
-//        directionRequest.source = startMapItem
-//        directionRequest.destination = endMapItem
-//        
-//        directionRequest.transportType = MKDirectionsTransportType.automobile
-//        
-//        // Calculate direction
-//        let directions = MKDirections(request: directionRequest)
-//        
-//        directions.calculate { routeResponse, routeError in
-//            guard let routeResponse = routeResponse else {
-//                if let routeError = routeError {
-//                    print("Error: \(routeError.localizedDescription)")
-//                }
-//                
-//                return
-//            }
-//            
-//            let route = routeResponse.routes[0]
-//            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
-//        }
-//    }
 }

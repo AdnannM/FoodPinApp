@@ -756,6 +756,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundImage" destination="TyW-Tb-ett" id="jhP-r2-Iqn"/>
                         <outlet property="emailTextField" destination="V3x-yr-hfB" id="GfH-os-63Y"/>
                         <outlet property="passwordTextField" destination="7vu-2i-zdY" id="TTy-yf-voY"/>
                     </connections>

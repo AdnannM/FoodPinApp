@@ -28,6 +28,7 @@ class AuthManager {
                    */
                   Auth.auth().createUser(withEmail: email, password: password) { user, error in
                       guard error == nil,  user != nil  else {
+                          completion(false)
                           return
                       }
                       
@@ -44,20 +45,20 @@ class AuthManager {
                   }
               } else {
                   // Either user name or email does not exist
-                  
+                  completion(false)
               }
           }
     }
     
-    public func loginUser(email: String?, password: String, completion: @escaping(Bool) -> Void) {
+    public func loginUser(email: String?, password: String, completion: @escaping(Error?) -> Void) {
         if let email = email {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 guard  authResult != nil, error == nil else {
-                    completion(false)
+                    
                     return
                 }
                 
-                completion(true)
+                print(error?.localizedDescription)
             }
         }
     }
@@ -71,9 +72,5 @@ class AuthManager {
                 }
             }
         }
-    }
-    
-    public func logoutUser() {
-        
     }
 }
