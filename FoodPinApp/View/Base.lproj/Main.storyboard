@@ -957,6 +957,9 @@
                                                 <color key="value" systemColor="systemTealColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPassword:" destination="LP6-P6-9ct" eventType="touchUpInside" id="S1X-tp-Efg"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-eD-qUt">
                                         <rect key="frame" x="10" y="107" width="408" height="44"/>
@@ -992,6 +995,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wd5-6L-fWh"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="khd-Co-uFP" id="jRr-6C-VkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vji-kf-gPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

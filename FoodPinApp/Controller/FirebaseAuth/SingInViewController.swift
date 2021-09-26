@@ -53,9 +53,26 @@ extension SingInViewController {
             emailUser = email
         }
         
-        Auth.auth().signIn(withEmail: emailUser!, password: password) { user, error in
+        Auth.auth().signIn(withEmail: emailUser!, password: password) { result, error in
             if let error = error {
                 self.showError(title: "Login Error", message: error.localizedDescription)
+                return
+            }
+            
+            // Email verification
+            guard let result = result, result.user.isEmailVerified else {
+                
+                let alert = UIAlertController(title: "Login Error", message: "You haven't confirmed your email address yet. We send you a confirmation email when you sign up.Please click the verification link in thet email. If you need us to send the confirmation email again please thap Resend Email", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "Resend email", style: .default) { action in
+                    Auth.auth().currentUser?.sendEmailVerification(completion: nil)
+                }
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alert.addAction(okAction)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true, completion: nil)
+                
                 return
             }
             
