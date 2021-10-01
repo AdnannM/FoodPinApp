@@ -101,6 +101,8 @@ class MapViewController: UIViewController {
                 mapView.showsUserLocation = true
             }
             
+            print("Hello")
+            
 //            if status == CLAuthorizationStatus.authorizedWhenInUse {
 //                mapView.showsUserLocation = true
 //            }
