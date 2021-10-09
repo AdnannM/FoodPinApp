@@ -15,6 +15,6 @@ target 'FoodPinApp' do
 	pod 'FirebaseDatabase'
 	pod 'lottie-ios'
 	pod 'DeviceKit'
-	pod 'GoogleSignIn', '~> 5.0'
+	pod 'GoogleSignIn'
 
 end
