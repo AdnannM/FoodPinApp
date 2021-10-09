@@ -86,6 +86,7 @@ class MapViewController: UIViewController {
         
         // Clear annotations array
         annotations.removeAll()
+        
     }
     
     // MARK: - Request User's authorization for location service

@@ -1,4 +1,9 @@
 PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - Bolts/Tasks (1.9.1)
   - DeviceKit (4.5.0)
   - Firebase/Analytics (8.4.0):
@@ -74,6 +79,10 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.5.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -93,6 +102,9 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.5.0):
     - GoogleUtilities/Logger
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.6.1)
   - leveldb-library (1.22.1)
   - lottie-ios (3.2.3)
@@ -114,12 +126,14 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Storage
   - FirebaseDatabase
+  - GoogleSignIn (~> 5.0)
   - lottie-ios
   - Parse
   - ViewAnimator
 
 SPEC REPOS:
   trunk:
+    - AppAuth
     - Bolts
     - DeviceKit
     - Firebase
@@ -132,7 +146,9 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
+    - GTMAppAuth
     - GTMSessionFetcher
     - leveldb-library
     - lottie-ios
@@ -142,6 +158,7 @@ SPEC REPOS:
     - ViewAnimator
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   DeviceKit: b68cded46afdaefc5d2253d631d441ba7049a7fe
   Firebase: 54cdc8bc9c9b3de54f43dab86e62f5a76b47034f
@@ -154,7 +171,9 @@ SPEC CHECKSUMS:
   FirebaseStorage: e6065bcbf70e2a06a8c3ddc66cbe03a395bbddc4
   GoogleAppMeasurement: 6b6a08fd9c71f4dbc89e0e812acca81d797aa342
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
@@ -163,6 +182,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: feb685c4548b659700f5e0f7c4a0d885f2325da1
+PODFILE CHECKSUM: 95ebb2087edc9d75b5ee0f98fe0a21b0c377664b
 
 COCOAPODS: 1.10.1

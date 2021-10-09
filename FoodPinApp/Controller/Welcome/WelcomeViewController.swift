@@ -8,6 +8,8 @@
 import UIKit
 import Lottie
 import DeviceKit
+import GoogleSignIn
+import FirebaseAuth
 
 class WelcomeViewController: UIViewController {
 
@@ -18,6 +20,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupAnimations()
+        configureDelegate()
     }
         
     @IBAction func unswindToWelcomeView(segue: UIStoryboardSegue) {
@@ -86,5 +89,55 @@ extension WelcomeViewController {
         animationView.loopMode = .loop
         animationView.play()
         backgroundView.addSubview(animationView)
+    }
+    
+    // Configure GID
+    private func configureDelegate() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+    }
+    
+    // MARK: - Action SingIn With google
+    
+    @IBAction func singInWithGoogle(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+}
+
+extension WelcomeViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil {
+            return
+        }
+        
+        guard let authentication = user.authentication else {
+            return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                         accessToken: authentication.accessToken)
+        
+        
+        Auth.auth().signIn(with: credential) { (result, error) in
+            if let error = error {
+                print("Login error: \(error.localizedDescription)")
+                let alertController = UIAlertController(title: "Login Error",
+                                                        message: error.localizedDescription,
+                                                        preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            
+            // Present main View
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+                UIApplication.shared.keyWindow?.rootViewController = vc
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
     }
 }

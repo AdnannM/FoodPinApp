@@ -9,9 +9,11 @@ import UIKit
 import Parse
 import FirebaseAuth
 import Firebase
+import GoogleSignIn
+
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
 
@@ -22,11 +24,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.clientKey = "4hlk0P5NuM6lG5WVGcnluXEb1QOfFxvXnP1turWq"
             $0.server = "https://parseapi.back4app.com"
         }
-        
+  
         FirebaseApp.configure()
         Parse.initialize(with: configuration)
         
+        // Configure Google Sing In
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
         return true
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("User email \(user.profile.email ?? "No Email")")
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
     }
 
     // MARK: UISceneSession Lifecycle

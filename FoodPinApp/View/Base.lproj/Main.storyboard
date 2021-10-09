@@ -453,6 +453,9 @@
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="singInWithGoogle:" destination="zsh-B0-QKa" eventType="touchUpInside" id="KSH-zw-Mbh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Welcome to Food Pin." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-Z9-jFa">
                                 <rect key="frame" x="34" y="135" width="332" height="99"/>

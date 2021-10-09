@@ -27,6 +27,7 @@
 		A6A1D3FB26FF276D001B53A2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */; };
 		A6A1D3FD26FF64EA001B53A2 /* data-4.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A1D3FC26FF64EA001B53A2 /* data-4.json */; };
 		A6ABC79A26DCE304001564BF /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */; };
+		A6BE7ED027118F84005B861F /* FirebaseAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE7ECE27118F84005B861F /* FirebaseAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6F3F70726FA3C3F00612285 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70626FA3C3F00612285 /* Buttons.swift */; };
 		A6F3F70B26FA467A00612285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */; };
 		A6F3F70D26FA46A800612285 /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3F70C26FA46A800612285 /* SingInViewController.swift */; };
@@ -44,6 +45,20 @@
 		A6FFAEB126FB104D0099B967 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FFAEA826FB104D0099B967 /* Rubik-Regular.ttf */; };
 		A6FFAEB226FB104D0099B967 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FFAEA926FB104D0099B967 /* Rubik-Black.ttf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A6BE7ED127118F84005B861F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A6BE7ED027118F84005B861F /* FirebaseAuth.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A603A58F26C13383009E3E8A /* FoodPinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +82,7 @@
 		A6A1D3FA26FF276D001B53A2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A6A1D3FC26FF64EA001B53A2 /* data-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-4.json"; sourceTree = "<group>"; };
 		A6ABC79926DCE304001564BF /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		A6BE7ECE27118F84005B861F /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F3F70626FA3C3F00612285 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A6F3F70A26FA467A00612285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A6F3F70C26FA46A800612285 /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +309,7 @@
 		B09A136B44F6C351B7CE7D50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6BE7ECE27118F84005B861F /* FirebaseAuth.framework */,
 				D11B2D9D646A283B1124BE28 /* Pods_FoodPinApp.framework */,
 			);
 			name = Frameworks;
@@ -310,6 +327,8 @@
 				A603A58C26C13383009E3E8A /* Frameworks */,
 				A603A58D26C13383009E3E8A /* Resources */,
 				EDFD6BBFE41C05E7A947A24F /* [CP] Embed Pods Frameworks */,
+				55077E4077F01A1B61A5E290 /* [CP] Copy Pods Resources */,
+				A6BE7ED127118F84005B861F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +419,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55077E4077F01A1B61A5E290 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodPinApp/Pods-FoodPinApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodPinApp/Pods-FoodPinApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodPinApp/Pods-FoodPinApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDFD6BBFE41C05E7A947A24F /* [CP] Embed Pods Frameworks */ = {
@@ -506,6 +542,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -567,6 +604,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -593,6 +631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJD5A2P8BC;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = FoodPinApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -614,6 +653,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJD5A2P8BC;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = FoodPinApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
