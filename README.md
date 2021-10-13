@@ -1,5 +1,5 @@
 # FoodPin
-FoodPin with MapKit
+FoodPin with MapKit, Firebase, Google Facebook SingIn
 
 - Get direction and Draw Route on Maps
 - Display User Location on Maps
